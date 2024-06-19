@@ -1,0 +1,41 @@
+import java.util.*;
+public class SimpleCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Scanner sc=new Scanner(System.in);
+    
+     System.out.println(" Menu \n 1 for Addition \n 2 for Subtraction \n 3 for mutliplication \n 4 for Division");
+     System.out.println("Enter 2 numbers ");
+     int n1=sc.nextInt();
+     int n2=sc.nextInt();
+     int result;
+     sc.nextLine();
+     System.out.println("Enter the option");
+     String option =sc.nextLine().toUpperCase();
+     switch(option) {
+     case "ADD":System.out.println("Addition of two numbers is :"+(n1+n2));
+     break;
+     case "SUB":System.out.println("subtraction of two numbers is :"+(n1-n2));
+     break;
+     case "MUl":System.out.println("mutiplication of two numbers is :"+(n1*n2));
+     break;
+     case "Div":
+    	 if (n2 != 0) {
+             result = n1 / n2;
+         } else {
+             System.out.println("Error: Division by zero is not allowed.");
+             boolean validChoice = false;
+         }
+    	 System.out.println("Division of two numbers is :"+(n1/n2));
+     break;
+     default:
+         System.out.println("Invalid choice. Please select a valid operation.");
+         boolean validChoice = false;
+         break;
+
+     }
+     sc.close();
+	}
+
+}
